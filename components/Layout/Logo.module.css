@@ -4,6 +4,7 @@
     font-weight: bold;
     font-family: var(--type-second);
     color: var(--color-grey-50);
+    line-height: 1.2;
 }
   
 @media (max-width: 48rem) {

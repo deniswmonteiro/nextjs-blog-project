@@ -1,16 +1,23 @@
 .latest {
-    width: 90%;
-    max-width: 80rem;
+    margin: 0 auto;
+    max-width: 76rem;
     font-size: var(--size-16);
+    padding: var(--size-16) 2rem;
 }
   
 .latest h2 {
+    font-family: var(--type-second);
     font-size: var(--size-8);
     color: var(--color-grey-800);
     text-align: center;
+    margin-bottom: var(--size-8);
 }
   
 @media (max-width: 48rem) {
+    .latest {
+        padding: var(--size-8) 1rem;
+    }
+
     .latest h2 {
         margin: var(--size-8) auto;
     }
