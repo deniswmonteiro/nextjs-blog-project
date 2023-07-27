@@ -8,27 +8,6 @@ const DUMMY_POSTS = [
         image: "getting-started-nextjs.png",
         excerpt: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vestibulum quis dictum leo.",
         date: "2023-07-27",
-    },
-    {
-        slug: "getting-started-with-nextjs-2",
-        title: "Getting Started with NextJS",
-        image: "getting-started-nextjs.png",
-        excerpt: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vestibulum quis dictum leo.",
-        date: "2023-07-27",
-    },
-    {
-        slug: "getting-started-with-nextjs-3",
-        title: "Getting Started with NextJS",
-        image: "getting-started-nextjs.png",
-        excerpt: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vestibulum quis dictum leo.",
-        date: "2023-07-27",
-    },
-    {
-        slug: "getting-started-with-nextjs-4",
-        title: "Getting Started with NextJS",
-        image: "getting-started-nextjs.png",
-        excerpt: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vestibulum quis dictum leo.",
-        date: "2023-07-27",
     }
 ];
 
