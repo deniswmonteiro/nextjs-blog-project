@@ -1,0 +1,26 @@
+.hero {
+    text-align: center;
+    background-image: linear-gradient(to bottom, var(--color-grey-900), var(--color-grey-800));
+    padding: var(--size-16) 0;
+}
+
+.hero h1 {
+    font-family: var(--type-second);
+    font-size: var(--size-16);
+    margin-bottom: var(--size-4);
+    color: var(--color-grey-300);
+}
+  
+.hero p {
+    font-size: var(--size-6);
+    color: var(--color-grey-200);
+    width: 90%;
+    max-width: 40rem;
+    margin: var(--size-4) auto;
+}
+
+@media (max-width: 48rem) {
+    .hero {
+        padding: var(--size-8) 0;
+    }
+}
