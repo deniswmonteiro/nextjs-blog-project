@@ -8,15 +8,30 @@
     border-radius: 4px;
     padding: var(--size-8);
 }
+
+.content h2 {
+    margin: 2rem 0 1rem 0;
+}
   
 .content p {
+    font-size: var(--size-4);
     color: var(--color-grey-800);
+    line-height: 1.4;
+    margin-bottom: 1rem;
+}
+
+.content ul {
+    font-size: var(--size-4);
 }
   
 .content .image {
     margin: var(--size-4) auto;
     width: 100%;
     max-width: 600px;
+}
+
+.content .image img {
+    border-radius: 4px;
 }
   
 @media (max-width: 48rem) {
