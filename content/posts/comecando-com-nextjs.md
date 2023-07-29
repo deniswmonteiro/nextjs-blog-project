@@ -2,7 +2,7 @@
 title: "Começando com o NextJS"
 date: "2023-07-27"
 image: comecando-com-nextjs.png
-excerpt: "O NextJS é um framework React para produção &ndash; facilita a criação fullstack de aplicativos e sites React e vem com SSR integrado."
+excerpt: "O NextJS é um framework React para produção - facilita a criação fullstack de aplicativos e sites React e vem com SSR integrado."
 isFeatured: true
 ---
 
