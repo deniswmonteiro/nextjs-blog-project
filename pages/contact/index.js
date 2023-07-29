@@ -1,8 +1,15 @@
-import Contact from "../../components/Contact/Contact"
+import Head from "next/head"
+import Contact from "../../components/Contact/Contact";
 
 const ContactPage = () => {
     return (
-        <Contact />
+        <>
+            <Head>
+                <meta name="description" content="Entre em contato comigo." />
+                <title>NextBlog &bull; Entre em Contato</title>
+            </Head>
+            <Contact />
+        </>
     )
 }
 

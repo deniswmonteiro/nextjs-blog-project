@@ -1,9 +1,16 @@
+import Head from "next/head";
 import PostContent from "../../components/Posts/Post/PostContent"
 import { getPostData, getPostsFiles } from "../../helpers/posts-util";
 
 const PostPage = ({ post }) => {
     return (
-        <PostContent post={post} />
+        <>
+            <Head>
+                <meta name="description" content={post.excerpt} />
+                <title>NextBlog &bull; {post.title}</title>
+            </Head>
+            <PostContent post={post} />
+        </>
     )
 }
 
