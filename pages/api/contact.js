@@ -17,8 +17,10 @@ export default async function handler(req, res) {
                 message
             }
 
+            const connString = `mongodb+srv://${process.env.mongodb_username}:${process.env.mongodb_password}@${process.env.mongodb_clustername}.cwxr3dv.mongodb.net/${process.env.mongodb_database}`;
+
             try {
-                const connect = await MongoClient.connect("mongodb+srv://deniswmonteiro:woftam-corMat-1pipna@cluster0.cwxr3dv.mongodb.net/blog-contact");
+                const connect = await MongoClient.connect(connString);
                 const db = connect.db();
 
                 try {
