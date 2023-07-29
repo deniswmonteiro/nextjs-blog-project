@@ -1,13 +1,29 @@
 import React from "react";
+import Notification from "../UI/Notification";
 import styles from "./Contact.module.css";
 
 const Contact = () => {
     const [email, setEmail] = React.useState("");
     const [name, setName] = React.useState("");
     const [message, setmessage] = React.useState("");
+    const [notification, setNotification] = React.useState("");
+    const [loading, setLoading] = React.useState(false);
+
+    function hideNotification() {
+        const timer = setTimeout(() => setNotification(null), 3000);
+
+        return () => clearTimeout(timer);   
+    }
 
     async function handleContactFormSubmit(event) {
         event.preventDefault();
+
+        setLoading(true);
+        setNotification({
+            status: "pending",
+            title: "Enviando",
+            message: "Mensagem sendo enviada..."
+        });
 
         const response = await fetch("/api/contact", {
             method: "POST",
@@ -22,7 +38,29 @@ const Contact = () => {
         });
         const result = await response.json();
 
-        console.log(result)
+        if (response.ok) {
+            setLoading(false);
+            setNotification({
+                status: "success",
+                title: "Sucesso",
+                message: "Mensagem enviada com sucesso."
+            });
+
+            setEmail("");
+            setName("");
+            setmessage("");
+            hideNotification();
+        }
+
+        else {
+            setLoading(false);
+            setNotification({
+                status: "error",
+                title: "Erro",
+                message: "Erro ao enviar mensagem."
+            });
+            hideNotification();
+        }
     }
 
     return (
@@ -51,10 +89,22 @@ const Contact = () => {
                             onChange={({target}) => setmessage(target.value)}></textarea>
                     </div>
                     <div className={styles.actions}>
-                        <button>Enviar Mensagem</button>
+                        {loading ?
+                            (
+                                <button disabled>Enviando...</button>
+                            ) : (
+                                <button>Enviar Mensagem</button>
+                            )
+                        }
                     </div>
                 </div>
             </form>
+
+            {notification && (
+                <Notification title={notification.title}
+                    message={notification.message}
+                    status={notification.status} />
+            )}
         </section>
     )
 }
