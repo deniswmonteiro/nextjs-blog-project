@@ -28,4 +28,4 @@ Neste artigo, vamos nos aprofundar nos principais conceitos e recursos que o Nex
 
 ## Roteamento baseado em arquivo
 
-![Crie rotas através do seu arquivo + estrutura de pastas](nextjs-file-based-routing.png)
+![Crie rotas através do seu arquivo + estrutura de pastas](roteamento-baseado-em-arquivo.png)

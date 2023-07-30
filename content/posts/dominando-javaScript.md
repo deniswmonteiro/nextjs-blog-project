@@ -1,7 +1,7 @@
 ---
 title: Dominando o JavaScript
 excerpt: "JavaScript é a linguagem de programação mais importante para o desenvolvimento Web. Você provavelmente não o conhece bem o suficiente!"
-image: mastering-js-thumb.png
+image: dominando-javascript.png
 isFeatured: false
 date: "2023-07-28"
 ---
