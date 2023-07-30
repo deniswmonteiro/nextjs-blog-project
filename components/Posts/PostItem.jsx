@@ -6,8 +6,6 @@ const PostItem = ({ post }) => {
     const imagePath = `/img/posts/${post.slug}/${post.image}`;
     const linkPath = `/posts/${post.slug}`;
 
-    console.log(post)
-
     const postDate = new Date(post.date).toLocaleDateString("pt-BR", {
         day: "numeric",
         month: "long",
